@@ -51,9 +51,7 @@ class _UpdateFromKwargsMixin(object):
     def _update(self, **kwargs):
         for k, v in kwargs.items():
             if not hasattr(self, k):
-                raise ValueError(
-                    "Excess keyword for {}: {} = {}".format(type(self), k, v)
-                )
+                print(f"Excess keyword for {type(self)}: {k} = {v}")
             setattr(self, k, v)
 
 
